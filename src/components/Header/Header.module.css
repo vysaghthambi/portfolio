@@ -1,0 +1,12 @@
+.AppBar:global(.MuiAppBar-root) {
+  background-color: #FFF;
+}
+
+.AppBar a:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.NavDrawer :global(.MuiPaper-root) {
+  background-color: var(--mui-palette-info-main);
+  width: 240px;
+}

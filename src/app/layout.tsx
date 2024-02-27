@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
 
-const inter = Montserrat({ subsets: ["latin"] });
+import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
+
+import Header from "@/components/Header/Header";
+import theme from "@/utils/theme";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -15,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <CssVarsProvider theme={theme}>
+          <Header />
+          <main>{children}</main>
+        </CssVarsProvider>
+      </body>
     </html>
   );
 }
