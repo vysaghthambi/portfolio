@@ -39,14 +39,14 @@ export default function Header() {
   return (
     <Box>
       <CssBaseline />
-      <AppBar component="nav" position="static" color="primary" className={style.AppBar}>
+      <AppBar component="nav" className={style.AppBar}>
         <Toolbar>
-          <Typography fontSize="1.5rem" fontWeight="700" color="info" flexGrow={1}>
+          <Typography fontSize="2rem" fontWeight="700" color="info" flexGrow={1}>
             @VysaghThambi
           </Typography>
           {isMobileScreen ? (
-            <IconButton onClick={handleDrawerToggle} color="info">
-              <MenuIcon />
+            <IconButton onClick={handleDrawerToggle} color="info" size="large">
+              <MenuIcon fontSize="large" />
             </IconButton>
           ) : (
             <>
@@ -54,7 +54,7 @@ export default function Header() {
                 <Link href={item.to} key={item.label}>
                   <Typography
                     color={isActive(item.to) ? "primary" : "info"}
-                    fontSize="0.8rem"
+                    fontSize="1.2rem"
                     fontWeight={500}
                   >
                     {item.label}
@@ -79,7 +79,11 @@ export default function Header() {
           >
             {menuList.map((item) => (
               <Link key={item.label} href={item.to}>
-                <Typography color={isActive(item.to) ? "primary" : "secondary"} p="0.5rem 2rem">
+                <Typography
+                  fontSize="1.3rem"
+                  color={isActive(item.to) ? "primary" : "secondary"}
+                  p="1rem 2rem"
+                >
                   {item.label}
                 </Typography>
               </Link>
