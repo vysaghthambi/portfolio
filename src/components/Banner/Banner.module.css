@@ -1,0 +1,8 @@
+.Banner:global(.MuiBox-root) {
+  height: 20svh;
+  background-image: var(--background-image-gradient);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -37,9 +36,9 @@ export default function Header() {
   };
 
   return (
-    <Box>
+    <header>
       <CssBaseline />
-      <AppBar component="nav" className={style.AppBar}>
+      <AppBar component="nav" position="static" className={style.AppBar}>
         <Toolbar>
           <Typography fontSize="2rem" fontWeight="700" color="info" flexGrow={1}>
             @VysaghThambi
@@ -91,6 +90,6 @@ export default function Header() {
           </Drawer>
         </nav>
       )}
-    </Box>
+    </header>
   );
 }

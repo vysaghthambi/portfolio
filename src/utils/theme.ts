@@ -11,7 +11,7 @@ import {
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const palette: PaletteOptions = {
-  primary: { main: "#8490ff" },
+  primary: { main: "#8490ff", light: "#62bdfc" },
   secondary: { main: "#f9f9ff" },
   info: { main: "#222222" },
 };

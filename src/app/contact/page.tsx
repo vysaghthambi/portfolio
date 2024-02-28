@@ -1,5 +1,9 @@
+import Banner from "@/components/Banner/Banner";
+
 export default function Contact() {
   return (
-    <h1>Contact</h1>
-  )
+    <section>
+      <Banner title="Contact" pageTitle="Contact" />
+    </section>
+  );
 }

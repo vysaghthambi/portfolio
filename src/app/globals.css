@@ -1,3 +1,9 @@
+:root {
+  --background-image-gradient: linear-gradient(0deg,
+      var(--mui-palette-primary-main) 0%,
+      var(--mui-palette-primary-light) 100%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
