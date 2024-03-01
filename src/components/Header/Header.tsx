@@ -42,9 +42,9 @@ export default function Header() {
   }, [pathName])
 
   return (
-    <header>
+    <>
       <CssBaseline />
-      <AppBar component="nav" position="static" className={style.AppBar}>
+      <AppBar component="nav" position="sticky" className={style.AppBar}>
         <Toolbar>
           <Typography fontSize="2rem" fontWeight="700" color="info" flexGrow={1}>
             @VysaghThambi
@@ -96,6 +96,6 @@ export default function Header() {
           </Drawer>
         </nav>
       )}
-    </header>
+    </>
   );
 }
