@@ -1,12 +1,33 @@
 .AppBar:global(.MuiAppBar-root) {
-  background-color: #FFF;
+  background-color: var(--mui-palette-primary-main);
 }
 
-.AppBar a:not(:last-of-type) {
+.AppBar .MenuItem:not(:last-of-type) {
   margin-right: 2rem;
 }
 
+.AppBar .MenuItem {
+  position: relative;
+}
+
+.AppBar .MenuItem::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--mui-palette-text-secondary);
+  position: absolute;
+  left: 50%;
+  width: 0;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.AppBar .MenuItem:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .NavDrawer :global(.MuiPaper-root) {
-  background-color: var(--mui-palette-info-main);
+  background-color: var(--mui-palette-primary-main);
   width: 240px;
+  padding-top: 1rem;
 }

@@ -10,8 +10,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import { useColorScheme, useTheme } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
+import Switch from "@mui/material/Switch";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -27,6 +28,8 @@ export default function Header() {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down("md"));
 
+  const { mode, setMode } = useColorScheme();
+
   const handleDrawerToggle = () => {
     setIsDrawerOpen((prev) => !prev);
   };
@@ -38,16 +41,20 @@ export default function Header() {
   useEffect(() => {
     if (!isDrawerOpen) return;
 
-    setIsDrawerOpen(false)
-  }, [pathName])
+    setIsDrawerOpen(false);
+  }, [pathName]);
+
+  const handleModeToggle = () => {
+    setMode(mode === "dark" ? "light" : mode === "light" ? "dark" : "dark");
+  };
 
   return (
-    <header>
+    <>
       <CssBaseline />
-      <AppBar component="nav" position="static" className={style.AppBar}>
+      <AppBar component="nav" position="sticky" className={style.AppBar}>
         <Toolbar>
-          <Typography fontSize="2rem" fontWeight="700" color="info" flexGrow={1}>
-            @VysaghThambi
+          <Typography fontSize="2rem" fontWeight="700" color="text.primary" flexGrow={1}>
+            <Link href="/home">Vysagh K T</Link>
           </Typography>
           {isMobileScreen ? (
             <IconButton onClick={handleDrawerToggle} color="info" size="large">
@@ -56,18 +63,20 @@ export default function Header() {
           ) : (
             <>
               {menuList.map((item) => (
-                <Link href={item.to} key={item.label}>
-                  <Typography
-                    color={isActive(item.to) ? "primary" : "info"}
-                    fontSize="1.2rem"
-                    fontWeight={500}
-                  >
-                    {item.label}
-                  </Typography>
-                </Link>
+                <Typography
+                  key={item.label}
+                  color={isActive(item.to) ? "text.primary" : "text.secondary"}
+                  fontSize="1.3rem"
+                  fontWeight={500}
+                  className={style.MenuItem}
+                >
+                  <Link href={item.to}>{item.label}</Link>
+                </Typography>
               ))}
             </>
           )}
+
+          <Switch checked={mode === "dark"} color="info" onClick={handleModeToggle} />
         </Toolbar>
       </AppBar>
 
@@ -83,19 +92,20 @@ export default function Header() {
             className={style.NavDrawer}
           >
             {menuList.map((item) => (
-              <Link key={item.label} href={item.to}>
-                <Typography
-                  fontSize="1.3rem"
-                  color={isActive(item.to) ? "primary" : "secondary"}
-                  p="1rem 2rem"
-                >
+              <Typography
+                key={item.label}
+                fontSize="1.3rem"
+                color={isActive(item.to) ? "text.primary" : "text.secondary"}
+                p="1rem 2rem"
+              >
+                <Link href={item.to}>
                   {item.label}
-                </Typography>
-              </Link>
+                </Link>
+              </Typography>
             ))}
           </Drawer>
         </nav>
       )}
-    </header>
+    </>
   );
 }

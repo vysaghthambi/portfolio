@@ -10,10 +10,31 @@ import {
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-const palette: PaletteOptions = {
-  primary: { main: "#8490ff", light: "#62bdfc" },
-  secondary: { main: "#f9f9ff" },
-  info: { main: "#222222" },
+declare module "@mui/material/styles" {
+  interface Palette {
+    normalGrey: Palette["primary"];
+  }
+  interface PaletteOptions {
+    normalGrey?: PaletteOptions["primary"];
+  }
+}
+
+const darkPalette: PaletteOptions = {
+  primary: { main: "#0d1926" },
+  secondary: { main: "#1a324c" },
+  info: { main: "#4383cb" },
+
+  text: { primary: "#8cb0d9", secondary: "#f7fafc" },
+  normalGrey: { main: "#303f50", light: "#cfd8e2" },
+};
+
+const lightPalette: PaletteOptions = {
+  primary: { main: "#fafafa" },
+  secondary: { main: "#efefef" },
+  info: { main: "#8a8a8a" },
+
+  text: { primary: "#000", secondary: "#3d3d3d" },
+  normalGrey: { main: "#c2bfbc", light: "#595959" },
 };
 
 const breakpoints: BreakpointsOptions = {
@@ -29,7 +50,10 @@ const breakpoints: BreakpointsOptions = {
 const theme = extendTheme({
   colorSchemes: {
     light: {
-      palette,
+      palette: lightPalette,
+    },
+    dark: {
+      palette: darkPalette,
     },
   },
   typography: {

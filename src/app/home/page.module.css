@@ -1,3 +1,56 @@
-.HeroSection {
+.HeroSection:global(.MuiBox-root) {
+  background-color: var(--mui-palette-primary-main);
+  height: calc(100svh - 64px);
+  display: flex;
+
+  position: relative;
+  width: 100%;
+}
+
+.HeroSection .TextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  padding-left: 6rem;
+}
+
+.HeroSection .TextContainer>div {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 3%;
+}
+
+.HeroSectionFooter:global(.MuiBox-root) {
   background-color: var(--mui-palette-secondary-main);
+  height: calc(50svh - 45px);
+  width: 100%;
+  z-index: 0;
+
+  position: absolute;
+  bottom: 0;
+
+  animation: 500ms ease-out 0s 1 slideInFromBottom;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .HeroSection:global(.MuiBox-root) {
+    height: calc(100svh - 56px);
+  }
+
+  .HeroSectionFooter:global(.MuiBox-root) {
+    height: calc(50svh - 36px);
+  }
 }

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <CssVarsProvider theme={theme}>
+        <CssVarsProvider theme={theme} defaultMode="dark">
           <Header />
           <main>{children}</main>
         </CssVarsProvider>
