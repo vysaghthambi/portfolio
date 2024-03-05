@@ -10,8 +10,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import { useColorScheme, useTheme } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
+import Switch from "@mui/material/Switch";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -27,6 +28,8 @@ export default function Header() {
   const theme = useTheme();
   const isMobileScreen = useMediaQuery(theme.breakpoints.down("md"));
 
+  const { mode, setMode } = useColorScheme();
+
   const handleDrawerToggle = () => {
     setIsDrawerOpen((prev) => !prev);
   };
@@ -40,6 +43,10 @@ export default function Header() {
 
     setIsDrawerOpen(false);
   }, [pathName]);
+
+  const handleModeToggle = () => {
+    setMode(mode === "dark" ? "light" : mode === "light" ? "dark" : "dark");
+  };
 
   return (
     <>
@@ -68,6 +75,8 @@ export default function Header() {
               ))}
             </>
           )}
+
+          <Switch checked={mode === "dark"} color="info" onClick={handleModeToggle} />
         </Toolbar>
       </AppBar>
 
