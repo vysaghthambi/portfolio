@@ -24,8 +24,20 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 575.98px) {
   html {
-    font-size: 8px;
+    font-size: 7px !important;
+  }
+}
+
+@media screen and (max-width: 639.98px) {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  html {
+    font-size: 9px !important;
   }
 }
