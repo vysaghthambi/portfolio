@@ -93,11 +93,12 @@ export default function Header() {
           >
             {menuList.map((item) => (
               <Typography
+                key={item.label}
                 fontSize="1.3rem"
                 color={isActive(item.to) ? "text.primary" : "text.secondary"}
                 p="1rem 2rem"
               >
-                <Link key={item.label} href={item.to}>
+                <Link href={item.to}>
                   {item.label}
                 </Link>
               </Typography>
