@@ -5,10 +5,6 @@ type MenuListType = {
 
 export const menuList: MenuListType[] = [
   {
-    label: "HOME",
-    to: "/home",
-  },
-  {
     label: "ABOUT",
     to: "/about",
   },
