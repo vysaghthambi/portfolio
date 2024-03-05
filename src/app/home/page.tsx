@@ -1,14 +1,18 @@
+import AboutIntro from "@/components/AboutIntro/AboutIntro";
+import LinkButton from "@/components/common/LinkButton/LinkButton";
+
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 import style from "./page.module.css";
 
 export default function Home() {
   return (
     <>
-      <Grid container height="100svh" className={style.HeroSection}>
-        <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
+      <Grid container className={style.HeroSection}>
+        <Grid item md={6} display="flex" justifyContent="center" alignItems="center">
           <Stack>
             <Typography fontSize="1.4rem" fontWeight={400} letterSpacing=".2rem" color="info">
               THIS IS ME
@@ -21,8 +25,12 @@ export default function Home() {
             </Typography>
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6}></Grid>
+        <Grid item md={6}></Grid>
       </Grid>
+
+      <Container maxWidth="lg">
+        <AboutIntro viewMoreComponent={<LinkButton href="/about" />} />
+      </Container>
     </>
   );
 }

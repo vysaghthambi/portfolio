@@ -13,7 +13,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 const palette: PaletteOptions = {
   primary: { main: "#8490ff", light: "#62bdfc" },
   secondary: { main: "#f9f9ff" },
-  info: { main: "#222222" },
+  info: { main: "#222222", light: "#777777" },
 };
 
 const breakpoints: BreakpointsOptions = {
