@@ -24,20 +24,20 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 575.98px) {
+@media screen and (640px <=width) and (width < 768px) {
   html {
-    font-size: 7px !important;
+    font-size: 9px !important;
   }
 }
 
-@media screen and (max-width: 639.98px) {
+@media screen and (576px <=width) and (width < 740px) {
   html {
     font-size: 8px !important;
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 575.98px) {
   html {
-    font-size: 9px !important;
+    font-size: 7px !important;
   }
 }

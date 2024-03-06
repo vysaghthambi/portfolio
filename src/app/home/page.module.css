@@ -13,6 +13,9 @@
   justify-content: center;
   z-index: 1;
   padding-left: 6rem;
+  padding-right: 6rem;
+
+  animation: 700ms ease-out 0s 1 slideInFromTop;
 }
 
 .HeroSection .TextContainer>div {
@@ -32,7 +35,19 @@
   position: absolute;
   bottom: 0;
 
-  animation: 500ms ease-out 0s 1 slideInFromBottom;
+  animation: 700ms ease-out 0s 1 slideInFromBottom;
+}
+
+.AboutSection:global(.MuiBox-root) {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--mui-palette-primary-main);
+  padding: 6rem;
+}
+
+.AboutSection .AboutMoreLink {
+  align-self: center;
 }
 
 @keyframes slideInFromBottom {
@@ -42,6 +57,16 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
