@@ -32,7 +32,7 @@ export default function Home() {
 
       <Box className={style.AboutSection}>
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
-          Hello, I'm Vysagh K T
+          Hello, I&apos;m Vysagh K T
         </Typography>
         <Typography fontSize="2.4rem" color="text.secondary" mt={2} mb={5}>
           Accomplished full-stack software engineer with over 2 years of experience delivering
