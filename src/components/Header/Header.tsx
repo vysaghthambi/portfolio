@@ -76,7 +76,12 @@ export default function Header() {
             </>
           )}
 
-          <Switch checked={mode === "dark"} color="info" onClick={handleModeToggle} />
+          <Switch
+            checked={mode !== "light"}
+            color="info"
+            onClick={handleModeToggle}
+            inputProps={{ "aria-label": "Switch mode" }}
+          />
         </Toolbar>
       </AppBar>
 
@@ -98,9 +103,7 @@ export default function Header() {
                 color={isActive(item.to) ? "text.primary" : "text.secondary"}
                 p="1rem 2rem"
               >
-                <Link href={item.to}>
-                  {item.label}
-                </Link>
+                <Link href={item.to}>{item.label}</Link>
               </Typography>
             ))}
           </Drawer>
