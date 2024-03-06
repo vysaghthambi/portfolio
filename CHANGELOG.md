@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/vysaghthambi/portfolio/compare/v1.1.0...v1.2.0) (2024-03-06)
+
+
+### Bug Fixes
+
+* **home:** fix build issue ([b9d5f68](https://github.com/vysaghthambi/portfolio/commit/b9d5f6811d57cfb23876a8e6ab71e29f8778551a))
+* **theme:** fix mode toggle switch not checked by default ([b7df13d](https://github.com/vysaghthambi/portfolio/commit/b7df13d557b67e9dd84e9929b3437131e45e562c))
+
+
+### Features
+
+* **home:** added about section ([af0c2ca](https://github.com/vysaghthambi/portfolio/commit/af0c2ca7ef97a4590963b9932fce3320457f50dd))
+
 # [1.1.0](https://github.com/vysaghthambi/portfolio/compare/v1.0.0...v1.1.0) (2024-03-05)
 
 
