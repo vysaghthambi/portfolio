@@ -7,9 +7,6 @@ export default function About() {
   return (
     <section>
       <Banner title="About Me" pageTitle="About" />
-      <Container maxWidth="lg">
-        <AboutIntro />
-      </Container>
     </section>
   );
 }
