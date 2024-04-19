@@ -1,0 +1,5 @@
+.Footer:global(.MuiBox-root) {
+	background-color: var(--mui-palette-primary-main);
+	padding: 2rem 6rem;
+	margin-top: -0.5rem;
+}
