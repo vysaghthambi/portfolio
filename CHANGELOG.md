@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/vysaghthambi/portfolio/compare/v1.2.0...v1.3.0) (2024-04-19)
+
+
+### Features
+
+* add project and footer section ([ba1f6e0](https://github.com/vysaghthambi/portfolio/commit/ba1f6e02bd3ab6bd0e42756e8f456eccc0473b91))
+* update banner styles ([3b2d4e8](https://github.com/vysaghthambi/portfolio/commit/3b2d4e820ef6bfbc3b45f719f3863d33cbc38182))
+
 # [1.2.0](https://github.com/vysaghthambi/portfolio/compare/v1.1.0...v1.2.0) (2024-03-06)
 
 
