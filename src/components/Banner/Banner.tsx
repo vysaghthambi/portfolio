@@ -7,6 +7,8 @@ import Stack from "@mui/material/Stack";
 
 import EastIcon from "@mui/icons-material/East";
 
+import WaveBorder from "../common/WaveBorder/WaveBorder";
+
 import style from "./Banner.module.css";
 
 type BannerProps = {
@@ -16,22 +18,26 @@ type BannerProps = {
 
 export default function Banner({ title, pageTitle }: BannerProps) {
   return (
-    <Box className={style.Banner}>
-      <Stack alignItems="center">
-        <Typography color="secondary" fontSize="4.8rem" fontWeight={600}>
-          {title}
-        </Typography>
-        <Breadcrumbs separator={<EastIcon color="secondary" fontSize="large" />}>
-          <Link href="/">
-            <Typography color="secondary" fontSize="1.4rem" fontWeight={300}>
-              Home
-            </Typography>
-          </Link>
-          <Typography color="secondary" fontSize="1.4rem" fontWeight={400}>
-            {pageTitle}
+    <>
+      <Box className={style.Banner}>
+        <Stack alignItems="center">
+          <Typography color="text.primary" fontSize="4.8rem" fontWeight={600}>
+            {title}
           </Typography>
-        </Breadcrumbs>
-      </Stack>
-    </Box>
+          <Breadcrumbs separator={<EastIcon fontSize="large" className={style.Arrow} />}>
+            <Link href="/">
+              <Typography color="text.secondary" fontSize="1.4rem" fontWeight={300}>
+                Home
+              </Typography>
+            </Link>
+            <Typography color="text.secondary" fontSize="1.4rem" fontWeight={400}>
+              {pageTitle}
+            </Typography>
+          </Breadcrumbs>
+        </Stack>
+      </Box>
+
+      <WaveBorder />
+    </>
   );
 }

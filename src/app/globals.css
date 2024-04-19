@@ -1,43 +1,56 @@
 :root {
-  --background-image-gradient: linear-gradient(0deg,
-      var(--mui-palette-primary-main) 0%,
-      var(--mui-palette-primary-light) 100%);
+	--background-image-gradient: linear-gradient(
+		0deg,
+		var(--mui-palette-primary-main) 0%,
+		var(--mui-palette-primary-light) 100%
+	);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 html {
-  font-size: 10px;
+	font-size: 10px;
 }
 
 html,
 body {
-  max-width: 100vw;
+	max-width: 100vw;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100svh;
+}
+
+main {
+	flex-grow: 1;
+	background-color: var(--mui-palette-primary-main);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 @media screen and (640px <=width) and (width < 768px) {
-  html {
-    font-size: 9px !important;
-  }
+	html {
+		font-size: 9px !important;
+	}
 }
 
 @media screen and (576px <=width) and (width < 740px) {
-  html {
-    font-size: 8px !important;
-  }
+	html {
+		font-size: 8px !important;
+	}
 }
 
 @media screen and (max-width: 575.98px) {
-  html {
-    font-size: 7px !important;
-  }
+	html {
+		font-size: 7px !important;
+	}
 }
