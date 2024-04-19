@@ -18,10 +18,11 @@ export const StyledLinkButton = styled(
   { name: "StyledLinkButton" },
 )(({ theme }) => ({
   fontSize: "1.5rem",
+  fontWeight: 500,
   color: theme.palette.text.primary,
   padding: "1.4rem 2.8rem",
   textTransform: "uppercase",
-  border: `2px solid ${theme.palette.secondary.main}`,
+  border: `2px solid ${theme.palette.text.secondary}`,
   borderRadius: 15,
   backgroundColor: "transparent",
   transition: "backgroundColor 500ms",

@@ -1,8 +1,12 @@
 .Banner:global(.MuiBox-root) {
-  height: 20svh;
-  background-image: var(--background-image-gradient);
+	height: 20svh;
+	background-color: var(--mui-palette-secondary-main);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Arrow:global(.MuiSvgIcon-root) {
+	color: var(--mui-palette-text-secondary);
 }

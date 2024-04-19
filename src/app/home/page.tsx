@@ -3,8 +3,10 @@ import Box from "@mui/material/Box";
 
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-import style from "./page.module.css";
 import { StyledLinkButton } from "@/components/common/StyledLinkButton/StyledLinkButton";
+import WaveBorder from "@/components/common/WaveBorder/WaveBorder";
+
+import style from "./page.module.css";
 
 export default function Home() {
   return (
@@ -30,7 +32,7 @@ export default function Home() {
         <Box className={style.HeroSectionFooter} />
       </Box>
 
-      <Box className={style.AboutSection}>
+      <Box className={[style.Section, style.About].join(" ")}>
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
           Hello, I&apos;m Vysagh K T
         </Typography>
@@ -43,8 +45,20 @@ export default function Home() {
           collaboratively to maintain live applications with high uptime and minimal downtime.
         </Typography>
 
-        <StyledLinkButton title="More About Me" href="/about" className={style.AboutMoreLink} />
+        <StyledLinkButton title="More About Me" href="/about" className={style.DetailsLink} />
       </Box>
+      <WaveBorder primary />
+      <Box className={[style.Section, style.Project].join(" ")}>
+        <Typography fontSize="4rem" fontWeight={600} color="text.primary">
+          Featured Projects
+        </Typography>
+        <Typography fontSize="2.4rem" color="text.secondary" mt={2} mb={5}>
+          Exciting Projects Coming Soon..
+        </Typography>
+
+        {/* <StyledLinkButton title="View All Projects" href="/about" className={style.DetailsLink} /> */}
+      </Box>
+      <WaveBorder />
     </>
   );
 }
