@@ -40,6 +40,7 @@ export default function Skills() {
         >
           {skills.map((skill) => (
             <Chip
+              key={skill}
               variant="outlined"
               color="secondary"
               label={
