@@ -8,6 +8,7 @@ import Experience from "@/components/Experience/Experience";
 import Education from "@/components/Education/Education";
 import Skills from "@/components/Skills/Skills";
 import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
+import Resume from "@/components/Resume/Resume";
 
 import userImage from "@/assets/images/user_image.jpg";
 
@@ -43,6 +44,7 @@ export default function About() {
       <Experience />
       <Education />
       <Skills />
+      <Resume />
     </section>
   );
 }

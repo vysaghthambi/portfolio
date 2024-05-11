@@ -12,8 +12,4 @@ export const menuList: MenuListType[] = [
     label: "PROJECTS",
     to: "/projects",
   },
-  {
-    label: "CONTACT",
-    to: "/contact",
-  },
 ];
