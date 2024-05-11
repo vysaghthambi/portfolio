@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/vysaghthambi/portfolio/compare/v1.3.0...v1.4.0) (2024-05-11)
+
+
+### Bug Fixes
+
+* add escape character for single quote ([707aeeb](https://github.com/vysaghthambi/portfolio/commit/707aeeb4b863df6b66df6c6ca2c87780c028338a))
+* add key in skills ([d9967cb](https://github.com/vysaghthambi/portfolio/commit/d9967cb6a73951b4805b9dabc09ba17a4509d282))
+
+
+### Features
+
+* **about:** add experience, education, skills in about page ([09a18c0](https://github.com/vysaghthambi/portfolio/commit/09a18c0ebe4f071170f2adabafa9c0e4bace483c))
+
 # [1.3.0](https://github.com/vysaghthambi/portfolio/compare/v1.2.0...v1.3.0) (2024-04-19)
 
 
