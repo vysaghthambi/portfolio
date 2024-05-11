@@ -97,7 +97,7 @@ export default function Education() {
                   fontWeight={500}
                   color="info.main"
                 >
-                  St. Albert's H.S.S
+                  St. Albert&apos;s H.S.S
                 </Link>
                 <Typography fontSize="1.6rem" color="text.secondary">
                   2015 | Kochi, Kerala
