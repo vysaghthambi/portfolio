@@ -1,9 +1,7 @@
 :root {
-	--background-image-gradient: linear-gradient(
-		0deg,
-		var(--mui-palette-primary-main) 0%,
-		var(--mui-palette-primary-light) 100%
-	);
+	--background-image-gradient: linear-gradient(0deg,
+			var(--mui-palette-primary-main) 0%,
+			var(--mui-palette-primary-light) 100%);
 }
 
 * {
@@ -30,6 +28,7 @@ body {
 main {
 	flex-grow: 1;
 	background-color: var(--mui-palette-primary-main);
+	padding-bottom: 5rem;
 }
 
 a {
@@ -37,7 +36,7 @@ a {
 	text-decoration: none;
 }
 
-@media screen and (640px <=width) and (width < 768px) {
+@media screen and (640px <=width) and (width < 1024px) {
 	html {
 		font-size: 9px !important;
 	}

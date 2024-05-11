@@ -1,9 +1,0 @@
-.RedirectBtn {
-  background-image: var(--background-image-gradient);
-  padding: 1rem;
-  display: inline-block;
-
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--mui-palette-secondary-main);
-}

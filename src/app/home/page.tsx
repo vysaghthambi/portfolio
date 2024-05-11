@@ -5,6 +5,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 import { StyledLinkButton } from "@/components/common/StyledLinkButton/StyledLinkButton";
 import WaveBorder from "@/components/common/WaveBorder/WaveBorder";
+import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
 
 import style from "./page.module.css";
 
@@ -32,7 +33,7 @@ export default function Home() {
         <Box className={style.HeroSectionFooter} />
       </Box>
 
-      <Box className={[style.Section, style.About].join(" ")}>
+      <StyledContainer className={[style.Section, style.About].join(" ")}>
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
           Hello, I&apos;m Vysagh K T
         </Typography>
@@ -46,9 +47,9 @@ export default function Home() {
         </Typography>
 
         <StyledLinkButton title="More About Me" href="/about" className={style.DetailsLink} />
-      </Box>
+      </StyledContainer>
       <WaveBorder primary />
-      <Box className={[style.Section, style.Project].join(" ")}>
+      <StyledContainer className={[style.Section, style.Project].join(" ")}>
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
           Featured Projects
         </Typography>
@@ -57,7 +58,7 @@ export default function Home() {
         </Typography>
 
         {/* <StyledLinkButton title="View All Projects" href="/about" className={style.DetailsLink} /> */}
-      </Box>
+      </StyledContainer>
       <WaveBorder />
     </>
   );
