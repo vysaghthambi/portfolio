@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/vysaghthambi/portfolio/compare/v1.4.0...v1.5.0) (2024-05-11)
+
+
+### Features
+
+* add resume download button ([4cb1e85](https://github.com/vysaghthambi/portfolio/commit/4cb1e85a3374ce799c579643b63b1bdade1e60fa))
+
 # [1.4.0](https://github.com/vysaghthambi/portfolio/compare/v1.3.0...v1.4.0) (2024-05-11)
 
 
