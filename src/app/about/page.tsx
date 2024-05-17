@@ -10,11 +10,13 @@ import Skills from "@/components/Skills/Skills";
 import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
 import Resume from "@/components/Resume/Resume";
 
-import userImage from "@/assets/images/user_image.jpg";
+import { resumeData } from "@/utils/resume";
 
 import style from "./page.module.css";
 
 export default function About() {
+  const { firstName, lastName, imageUrl, about } = resumeData;
+
   return (
     <section>
       <Banner title="About Me" pageTitle="About" />
@@ -22,20 +24,14 @@ export default function About() {
       <StyledContainer>
         <Stack gap={4} className={style.AboutSection}>
           <div>
-            <Image src={userImage} alt="Vysagh" height={300} />
+            <Image src={imageUrl} alt={firstName} height={300} width={230} />
           </div>
           <div>
             <Typography fontSize="4rem" fontWeight={600} color="text.primary">
-              Hello, I&apos;m Vysagh K T
+              Hello, I&apos;m {firstName} {lastName}
             </Typography>
             <Typography fontSize="2.2rem" color="text.secondary" mt={2} mb={5}>
-              Accomplished full-stack software engineer with over 2 years of experience delivering
-              cutting-edge web applications using React and Node.js. Skilled in Agile methodologies
-              and adept at leading teams to deliver high-quality projects on time. Proficient in SQL
-              and MongoDB. Passionate about expanding knowledge in AWS and leveraging the latest
-              technologies to deliver exceptional results. Adept at creative problem-solving and
-              working collaboratively to maintain live applications with high uptime and minimal
-              downtime.
+              {about}
             </Typography>
           </div>
         </Stack>

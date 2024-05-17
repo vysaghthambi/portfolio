@@ -6,25 +6,13 @@ import Typography from "@mui/material/Typography";
 import { StyledContainer } from "../common/StyledContainer/StyledContainer";
 import ComponentHeading from "../common/ContentHeading/ContentHeading";
 
+import { resumeData } from "@/utils/resume";
+
 import style from "./Skills.module.css";
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "ReactJS",
-  "NodeJS",
-  "React Testing Library",
-  "Jest",
-  "Git",
-  "Java",
-  "Spring Boot",
-  "DBMS",
-  "Shopify",
-];
-
 export default function Skills() {
+  const { skills } = resumeData;
+
   return (
     <Box mt={5}>
       <ComponentHeading heading="Skills" />

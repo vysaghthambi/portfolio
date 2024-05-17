@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
@@ -9,105 +11,60 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
+import { resumeData } from "@/utils/resume";
+
 import ComponentHeading from "../common/ContentHeading/ContentHeading";
 import { StyledContainer } from "../common/StyledContainer/StyledContainer";
 
 export default function Education() {
+  const { education } = resumeData;
+
   return (
     <Box mt={5}>
       <ComponentHeading heading="Education" />
 
       <StyledContainer mt={4}>
         <Timeline position="alternate">
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot variant="outlined" />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Box>
-                <Typography fontSize="2rem" fontWeight={500} color="text.secondary">
-                  B.Tech - Electrical and Electronics
-                </Typography>
-                <Link
-                  href="https://www.mec.ac.in/"
-                  underline="hover"
-                  fontSize="2rem"
-                  fontWeight={500}
-                  color="info.main"
-                >
-                  Model Engineering College
-                </Link>
-                <Typography fontSize="1.6rem" color="text.secondary">
-                  2017 - 2021 | Kochi, Kerala
-                </Typography>
-                <Typography fontSize="1.4rem" color="text.secondary">
-                  CGPA: 8.2
-                </Typography>
-              </Box>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot variant="outlined" />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Box>
-                <Typography fontSize="2rem" fontWeight={500} color="text.secondary">
-                  Class XII
-                </Typography>
-                <Link
-                  href="https://thsskaloor.ihrd.ac.in/"
-                  underline="hover"
-                  fontSize="2rem"
-                  fontWeight={500}
-                  color="info.main"
-                >
-                  Model Technical H.S.S
-                </Link>
-                <Typography fontSize="1.6rem" color="text.secondary">
-                  2017 | Kochi, Kerala
-                </Typography>
-                <Typography fontSize="1.4rem" color="text.secondary">
-                  Aggregate: 87.6%
-                </Typography>
-              </Box>
-            </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot variant="outlined" />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Box>
-                <Typography fontSize="2rem" fontWeight={500} color="text.secondary">
-                  Class X
-                </Typography>
-                <Link
-                  href="https://stalbertshss.in/"
-                  underline="hover"
-                  fontSize="2rem"
-                  fontWeight={500}
-                  color="info.main"
-                >
-                  St. Albert&apos;s H.S.S
-                </Link>
-                <Typography fontSize="1.6rem" color="text.secondary">
-                  2015 | Kochi, Kerala
-                </Typography>
-                <Typography fontSize="1.4rem" color="text.secondary">
-                  Aggregate: 90%
-                </Typography>
-              </Box>
-            </TimelineContent>
-          </TimelineItem>
+          {education.map((item) => (
+            <TimelineItem key={item.institution}>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot variant="outlined" />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Box>
+                  <Typography fontSize="2rem" fontWeight={500} color="text.secondary">
+                    {item.degree}
+                    {item.stream && ` - ${item.stream}`}
+                  </Typography>
+                  <Link
+                    href={item.institutionUrl}
+                    underline="hover"
+                    target="_blank"
+                    rel="noopener"
+                    fontSize="2rem"
+                    fontWeight={500}
+                    color="info.main"
+                  >
+                    {item.institution}
+                  </Link>
+                  <Typography fontSize="1.6rem" color="text.secondary">
+                    {item.startDate && `${dayjs(item.startDate).format("YYYY")} - `}{" "}
+                    {item.endDate ? dayjs(item.endDate).format("YYYY") : "Present"} |{" "}
+                    {item.location}
+                  </Typography>
+                  <Typography fontSize="1.4rem" color="text.secondary">
+                    {item.cgpa
+                      ? `CGPA: ${item.cgpa}`
+                      : item.percentage
+                        ? `Percentage: ${item.percentage}%`
+                        : ""}
+                  </Typography>
+                </Box>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
         </Timeline>
       </StyledContainer>
     </Box>
