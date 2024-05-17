@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/vysaghthambi/portfolio/compare/v1.5.0...v1.5.1) (2024-05-17)
+
+
+### Performance Improvements
+
+* remove hardcoded values ([8007414](https://github.com/vysaghthambi/portfolio/commit/800741480275a713d421a17531ce8433d6d134c3))
+
 # [1.5.0](https://github.com/vysaghthambi/portfolio/compare/v1.4.0...v1.5.0) (2024-05-11)
 
 
