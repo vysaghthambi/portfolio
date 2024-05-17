@@ -7,9 +7,13 @@ import { StyledLinkButton } from "@/components/common/StyledLinkButton/StyledLin
 import WaveBorder from "@/components/common/WaveBorder/WaveBorder";
 import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
 
+import { resumeData } from "@/utils/resume";
+
 import style from "./page.module.css";
 
 export default function Home() {
+  const { firstName, lastName, designation, about } = resumeData;
+
   return (
     <>
       <Box className={style.HeroSection}>
@@ -18,10 +22,10 @@ export default function Home() {
             THIS IS ME
           </Typography>
           <Typography fontSize="4.8rem" fontWeight={800} color="text.secondary">
-            VYSAGH K T
+            {firstName} {lastName}
           </Typography>
           <Typography fontSize="4.8rem" fontWeight={800} color="text.secondary">
-            SOFTWARE ENGINEER
+            {designation}
           </Typography>
           <div>
             <ArrowDownwardIcon fontSize="large" />
@@ -35,15 +39,10 @@ export default function Home() {
 
       <StyledContainer className={[style.Section, style.About].join(" ")}>
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
-          Hello, I&apos;m Vysagh K T
+          Hello, I&apos;m {firstName} {lastName}
         </Typography>
         <Typography fontSize="2.4rem" color="text.secondary" mt={2} mb={5}>
-          Accomplished full-stack software engineer with over 2 years of experience delivering
-          cutting-edge web applications using React and Node.js. Skilled in Agile methodologies and
-          adept at leading teams to deliver high-quality projects on time. Proficient in SQL and
-          MongoDB. Passionate about expanding knowledge in AWS and leveraging the latest
-          technologies to deliver exceptional results. Adept at creative problem-solving and working
-          collaboratively to maintain live applications with high uptime and minimal downtime.
+          {about}
         </Typography>
 
         <StyledLinkButton title="More About Me" href="/about" className={style.DetailsLink} />

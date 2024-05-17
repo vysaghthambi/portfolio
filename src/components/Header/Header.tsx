@@ -17,10 +17,13 @@ import Switch from "@mui/material/Switch";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import { menuList } from "@/constants/navMenuList";
+import { resumeData } from "@/utils/resume";
 
 import style from "./Header.module.css";
 
 export default function Header() {
+  const { firstName, lastName } = resumeData;
+
   const pathName = usePathname();
 
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
@@ -54,7 +57,9 @@ export default function Header() {
       <AppBar component="nav" position="sticky" className={style.AppBar}>
         <Toolbar>
           <Typography fontSize="2rem" fontWeight="700" color="text.primary" flexGrow={1}>
-            <Link href="/home">Vysagh K T</Link>
+            <Link href="/home">
+              {firstName} {lastName}
+            </Link>
           </Typography>
           {isMobileScreen ? (
             <IconButton onClick={handleDrawerToggle} color="info" size="large">
