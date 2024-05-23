@@ -1,0 +1,16 @@
+.EducationContainer :global(.MuiTimelineContent-root) {
+  opacity: 0;
+  scale: .8;
+
+  animation: scaling linear forwards;
+  animation-timeline: view(0px 0px);
+  animation-range-start: cover;
+  animation-range-end: contain 100px;
+}
+
+@keyframes scaling {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}

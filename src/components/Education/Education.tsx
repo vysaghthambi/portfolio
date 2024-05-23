@@ -16,6 +16,8 @@ import { resumeData } from "@/utils/resume";
 import ComponentHeading from "../common/ContentHeading/ContentHeading";
 import { StyledContainer } from "../common/StyledContainer/StyledContainer";
 
+import style from "./Education.module.css";
+
 export default function Education() {
   const { education } = resumeData;
 
@@ -23,7 +25,7 @@ export default function Education() {
     <Box mt={5}>
       <ComponentHeading heading="Education" />
 
-      <StyledContainer mt={4}>
+      <StyledContainer className={style.EducationContainer} mt={4}>
         <Timeline position="alternate">
           {education.map((item) => (
             <TimelineItem key={item.institution}>
