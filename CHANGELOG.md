@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/vysaghthambi/portfolio/compare/v1.5.1...v1.6.0) (2024-05-23)
+
+
+### Features
+
+* animation for education details ([5ccc268](https://github.com/vysaghthambi/portfolio/commit/5ccc268ad2098df06c31282ff9b0827132c61948))
+
 ## [1.5.1](https://github.com/vysaghthambi/portfolio/compare/v1.5.0...v1.5.1) (2024-05-17)
 
 
