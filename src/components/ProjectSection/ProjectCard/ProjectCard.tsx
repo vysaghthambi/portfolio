@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Stack className={style.ProjectCardContainer}>
       <Stack>
-        <Image src={project.images[0]} alt={project.name} width={400} height={200} />
+        <Image src={project.images} alt={project.name} width={400} height={200} />
       </Stack>
       <Stack pl={4}>
         <Stack direction="row" alignItems="center" gap={3}>
