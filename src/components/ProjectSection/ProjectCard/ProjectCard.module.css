@@ -1,0 +1,20 @@
+.ProjectCardContainer:global(.MuiStack-root) {
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+
+  border: 1px solid var(--mui-palette-text-primary);
+}
+
+.StackChip:global(.MuiChip-root) {
+  border: 2px solid var(--mui-palette-info-main);
+}
+
+.ProjectCardContainer a {
+  display: flex;
+  align-items: center;
+}
+
+.ProjectCardContainer a:hover {
+  text-decoration: underline;
+}

@@ -1,14 +1,18 @@
 import Banner from "@/components/Banner/Banner";
+import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
+import ProjectSection from "@/components/ProjectSection/ProjectSection";
 
-import Typography from "@mui/material/Typography";
+import { resumeData } from "@/utils/resume";
 
 export default function Projects() {
+  const { projects } = resumeData;
+
   return (
     <section>
       <Banner title="My Projects" pageTitle="Projects" />
-      <Typography fontSize="2.4rem" color="text.secondary" textAlign="center">
-        Exciting Projects Coming Soon..
-      </Typography>
+      <StyledContainer>
+        <ProjectSection projects={projects} />
+      </StyledContainer>
     </section>
   );
 }

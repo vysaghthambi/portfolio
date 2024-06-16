@@ -21,6 +21,15 @@ export type Education = {
   percentage?: number;
 };
 
+export type Project = {
+  name: string;
+  images: string;
+  description: string;
+  stack: string[];
+  url: string;
+  githubUrl?: string;
+};
+
 export type Resume = {
   firstName: string;
   lastName: string;
@@ -32,6 +41,7 @@ export type Resume = {
   imageUrl: string;
   experiences: Experience[];
   education: Education[];
+  projects: Project[];
   skills: string[];
   resumeUrl: string;
 };
