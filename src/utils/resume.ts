@@ -1,4 +1,4 @@
-import { Education, Experience, Resume } from "@/types/resume";
+import { Education, Experience, Project, Resume } from "@/types/resume";
 
 const experiences: Experience[] = [
   {
@@ -118,6 +118,17 @@ const education: Education[] = [
   },
 ];
 
+const projects: Project[] = [
+  {
+    name: "URL Shortener",
+    description: "An app that converts the long URL into a shorter one.",
+    images: "/assets/images/url-shortener.jpeg",
+    stack: ["Next.js", "NextAuth.js", "Prisma", "MongoDB"],
+    url: "https://url-shortener-ten-psi.vercel.app/",
+    githubUrl: "https://github.com/vysaghthambi/url-shortener",
+  },
+];
+
 const skills = [
   "HTML",
   "CSS",
@@ -147,5 +158,6 @@ export const resumeData: Resume = {
   resumeUrl: "/docs/resume.pdf",
   experiences,
   education,
+  projects,
   skills,
 };

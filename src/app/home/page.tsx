@@ -6,13 +6,16 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { StyledLinkButton } from "@/components/common/StyledLinkButton/StyledLinkButton";
 import WaveBorder from "@/components/common/WaveBorder/WaveBorder";
 import { StyledContainer } from "@/components/common/StyledContainer/StyledContainer";
+import ProjectSection from "@/components/ProjectSection/ProjectSection";
 
 import { resumeData } from "@/utils/resume";
 
 import style from "./page.module.css";
 
 export default function Home() {
-  const { firstName, lastName, designation, about } = resumeData;
+  const { firstName, lastName, designation, about, projects } = resumeData;
+
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <>
@@ -52,11 +55,15 @@ export default function Home() {
         <Typography fontSize="4rem" fontWeight={600} color="text.primary">
           Featured Projects
         </Typography>
-        <Typography fontSize="2.4rem" color="text.secondary" mt={2} mb={5}>
-          Exciting Projects Coming Soon..
-        </Typography>
+        <Box mt={3} mb={5}>
+          <ProjectSection projects={featuredProjects} />
+        </Box>
 
-        {/* <StyledLinkButton title="View All Projects" href="/about" className={style.DetailsLink} /> */}
+        <StyledLinkButton
+          title="View All Projects"
+          href="/projects"
+          className={style.DetailsLink}
+        />
       </StyledContainer>
       <WaveBorder />
     </>
