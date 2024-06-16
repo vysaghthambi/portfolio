@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/vysaghthambi/portfolio/compare/v1.6.0...v1.7.0) (2024-06-16)
+
+
+### Features
+
+* **projects:** add project section ([74625fe](https://github.com/vysaghthambi/portfolio/commit/74625fecc6a9fc7d89f0b7785f73bddc88e75559))
+
+
+### Performance Improvements
+
+* **projects:** fix issue with image type ([df7430c](https://github.com/vysaghthambi/portfolio/commit/df7430cd7ecd27ad4afc16e57315bfeb0eff17b3))
+
 # [1.6.0](https://github.com/vysaghthambi/portfolio/compare/v1.5.1...v1.6.0) (2024-05-23)
 
 
