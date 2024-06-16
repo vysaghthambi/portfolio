@@ -18,11 +18,11 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Stack className={style.ProjectCardContainer}>
-      <Stack>
-        <Image src={project.images} alt={project.name} width={400} height={200} />
+    <Stack className={style.ProjectCardContainer} rowGap={2} columnGap={2}>
+      <Stack className={style.ImageContainer}>
+        <Image src={project.images} alt={project.name} fill />
       </Stack>
-      <Stack pl={4}>
+      <Stack>
         <Stack direction="row" alignItems="center" gap={3}>
           <Link href={project.url} target="_blank" rel="noopener">
             <Typography fontSize="2rem" fontWeight={700} color="text.secondary">
@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </Link>
           )}
         </Stack>
-        <Typography fontSize="1.8rem" color="text.primary" mt={2}>
+        <Typography fontSize="1.8rem" color="text.primary" mt={1}>
           {project.description}
         </Typography>
         <Stack direction="row" rowGap={2} columnGap={1} mt={2} useFlexGap flexWrap="wrap">

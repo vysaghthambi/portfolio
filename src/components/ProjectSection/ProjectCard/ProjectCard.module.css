@@ -1,9 +1,15 @@
 .ProjectCardContainer:global(.MuiStack-root) {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   padding: 2%;
+  min-height: 200px;
 
   border: 1px solid var(--mui-palette-text-primary);
+}
+
+.ImageContainer:global(.MuiStack-root) {
+  position: relative;
+  min-height: 200px;
 }
 
 .StackChip:global(.MuiChip-root) {
@@ -17,4 +23,11 @@
 
 .ProjectCardContainer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .ProjectCardContainer:global(.MuiStack-root) {
+    grid-template-columns: 1fr;
+    padding: 4%;
+  }
 }
